@@ -52,7 +52,19 @@ bin  redis-3.0.7  redis-3.0.7.tar.gz
 [root@localhost bin]# ls
 dump.rdb         redis-check-aof   redis-cli   redis-sentinel
 redis-benchmark  redis-check-dump  redis.conf  redis-server
-[root@localhost bin]# ./redis-server redis.conf（在对应目录下找到--   启动指令为    ./     )
+[root@localhost bin]# ./redis-server redis.conf（在对应目录下找到--   启动指令为    ./    
+
+------------------------------------遇到请求被拒，设置永久启动方法
+修改redis.conf配置文件， daemonize yes 以后端模式启动。
+
+执行如下命令启动redis：
+cd /usr/local/redis
+./bin/redis-server ./redis.conf
+
+redis默认使用6379端口。
+
+也可更改redis.conf文件，修改端口号：
+-----------------------------------------
 
 最后运行代码，控制台输出PONG，即解决
 
