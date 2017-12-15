@@ -33,3 +33,5 @@ num  target     prot opt source               destination
 我们可以看到80端口打开了：ACCEPT     tcp  --  0.0.0.0/0            0.0.0.0/0           tcp dpt:80 
 
 然后我们尝试浏览器输入http://ip:port就可以访问了。
+
+ refrence website:      http://www.360doc.com/content/16/0105/17/12146850_525690022.shtml
