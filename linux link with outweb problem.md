@@ -5,6 +5,7 @@ linux (ifconfig -a) eth0 no ip & ip is  127.0.0.1
 
 
 * solve method:
+
 输入`ifconfig`后，显示为`127.0.0.1`
 
 在linux系统中输入命令:
