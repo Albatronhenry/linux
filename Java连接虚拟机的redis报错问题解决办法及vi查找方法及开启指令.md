@@ -1,7 +1,7 @@
 ### linux--Java连接虚拟机的redis报错问题解决办法
 
 Eclipse执行下列代码：
-```
+```java
 public class TestPing {
 
 public static void main(String[] args) {
@@ -24,12 +24,12 @@ System.out.println(jedis.ping());
 ```
 
 2.继续运行上述代码，报错如下：
-```
+```java
 Exception in thread "main" redis.clients.jedis.exceptions.JedisConnectionException: java.net.ConnectException: Connection refused: connect
 ```
 解决方案，修改redis.conf配置文件，将端口号127.0.0.1注释掉，这样任何IP都能访问，
 
-```
+```linux
 [root@localhost bin]# cd /usr/local/redis/bin
 [root@localhost bin]# ls
 dump.rdb         redis-check-aof   redis-cli   redis-sentinel
@@ -51,7 +51,7 @@ redis-benchmark  redis-check-dump  redis.conf  redis-server
 --------------------------------------------------------------
 保存退出后，运行代码，发现报错依旧，因为尚未启动redis服务，启动redis服务
 
-```
+```linux
 [root@localhost redis]# ls
 bin  redis-3.0.7  redis-3.0.7.tar.gz
 [root@localhost redis]# cd bin
@@ -64,7 +64,7 @@ redis-benchmark  redis-check-dump  redis.conf  redis-server
 修改redis.conf配置文件， daemonize yes 以后端模式启动。
 
 执行如下命令启动redis：
-```
+```linux
 cd /usr/local/redis
 ./bin/redis-server ./redis.conf
 ```
