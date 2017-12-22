@@ -107,6 +107,8 @@ chown root:root  file 将file的所有者改成hadoop用户，所属组改成had
 
 -------
 #### 三、用户管理
+
+----------
 添加用户
 useradd  itcast0830
 必须设置密码才能正常登陆    passwd itcast0830
@@ -148,6 +150,8 @@ groups
 -------
 
 #### 四、常见系统管理(凡是涉及到修改，就一定要用root权限)
+
+--------------
 ****
 轻易不要使用su去切换到root的身份
 普通用户使用sudo来执行root权限的命令
@@ -169,8 +173,11 @@ ps -ef  查看系统中当前瞬间的进程信息快照
 ps -ef | grep myshell.sh  搜索myshell进程的信息
 kill -9 pid  杀掉进程  （-9 表示强制杀死）
 
+--------------
 
 #### 五、文件归档压缩(1：打包--归档； 2：压缩)
+
+---------------------
 1、归档
 ` tar -cvf testdir.tar testdir/ `
 2、压缩
@@ -187,8 +194,11 @@ tar -xzvf testdir.tar.gz -C Downloads/   解压到指定的Downloads目录下
 
 ```
 
+----------------
 
 #### 六、网络管理
+
+---------------
 修改ip地址的配置
 sudo vi /etc/sysconfig/network-scripts/ifcfg-eth0 修改该配置文件即可改ip地址
 或者在root权限下用setup指令通过一个带提示的伪图形界面来修改
@@ -241,10 +251,12 @@ vi /etc/inittab
 netstat -nltp   
 
 
-
+-----------------------
 
 
 #### 七、常用工具指令
+
+-----------------
 wc   统计文本信息（行数，词数，字符数）
 date  查看或者修改系统的日期和时间
 echo  输出字符串或者变量的值
@@ -261,9 +273,11 @@ vi hello.world 进入文件编辑
 
 如果不保存，底行命令就用 q! 
 
-
+---------------
 
 #### 八、linux中的软件安装 
+
+----------------
 jdk
 将安装包解压到你的安装路径下
 然后修改环境变量  sudo vi /etc/profile
@@ -293,6 +307,6 @@ sudo rpm -ivh MySQL-server-5.1.73-1.glibc23.i386.rpm
 halt 关机  reboot重启   
 
 
+-------------------
 
-
-
+[笔记内容](https://github.com/Albatronhenry/UploadFile/blob/master/linux/linux%E7%AC%94%E8%AE%B0.txt)
